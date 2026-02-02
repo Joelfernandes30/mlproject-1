@@ -1,0 +1,39 @@
+[2026-02-02 10:48:33] INFO - Read train and test data completed
+[2026-02-02 10:48:33] INFO - Obtaining preprocessing object
+[2026-02-02 10:48:33] INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[2026-02-02 10:48:33] INFO - Numerical columns: ['writing_score', 'reading_score']
+[2026-02-02 10:50:28] INFO - Read train and test data completed
+[2026-02-02 10:50:28] INFO - Obtaining preprocessing object
+[2026-02-02 10:50:28] INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[2026-02-02 10:50:28] INFO - Numerical columns: ['writing_score', 'reading_score']
+[2026-02-02 10:50:28] INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[2026-02-02 10:50:28] INFO - Saved preprocessing object.
+[2026-02-02 10:53:41] INFO - Read train and test data completed
+[2026-02-02 10:53:41] INFO - Obtaining preprocessing object
+[2026-02-02 10:53:41] INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[2026-02-02 10:53:41] INFO - Numerical columns: ['writing_score', 'reading_score']
+[2026-02-02 10:53:41] INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[2026-02-02 10:53:41] INFO - Saved preprocessing object.
+[2026-02-02 10:53:41] INFO - Split training and test input data
+[2026-02-02 10:54:21] INFO - Read train and test data completed
+[2026-02-02 10:54:21] INFO - Obtaining preprocessing object
+[2026-02-02 10:54:21] INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[2026-02-02 10:54:21] INFO - Numerical columns: ['writing_score', 'reading_score']
+[2026-02-02 10:54:21] INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[2026-02-02 10:54:21] INFO - Saved preprocessing object.
+[2026-02-02 10:54:21] INFO - Split training and test input data
+[2026-02-02 10:55:30] INFO - Split training and test input data
+[2026-02-02 10:57:09] INFO - Read train and test data completed
+[2026-02-02 10:57:09] INFO - Obtaining preprocessing object
+[2026-02-02 10:57:09] INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[2026-02-02 10:57:09] INFO - Numerical columns: ['writing_score', 'reading_score']
+[2026-02-02 10:57:09] INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[2026-02-02 10:57:09] INFO - Saved preprocessing object.
+[2026-02-02 10:57:09] INFO - Split training and test input data
+[2026-02-02 10:58:44] INFO - Read train and test data completed
+[2026-02-02 10:58:44] INFO - Obtaining preprocessing object
+[2026-02-02 10:58:44] INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[2026-02-02 10:58:44] INFO - Numerical columns: ['writing_score', 'reading_score']
+[2026-02-02 10:58:44] INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[2026-02-02 10:58:44] INFO - Saved preprocessing object.
+[2026-02-02 10:58:44] INFO - Split training and test input data
