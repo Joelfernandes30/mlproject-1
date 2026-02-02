@@ -1,0 +1,72 @@
+version: 0.2
+
+# AWS CodeBuild buildspec for ML_Project-1 (Flask ML Application)
+# This specification handles build, test, and deployment phases
+
+phases:
+  pre_build:
+    commands:
+      - echo "Starting Pre-Build Phase..."
+      - echo "Installing Python dependencies..."
+      - python -m pip install --upgrade pip setuptools wheel
+      - pip install -r requirements.txt
+      - echo "Pre-Build Phase Complete"
+
+  build:
+    commands:
+      - echo "Starting Build Phase..."
+      - echo "Running application tests..."
+      - echo "Testing imports and module structure..."
+      - python -c "from src.exception import CustomException; print('Exception module loaded')"
+      - python -c "from src.logger import logging; print('Logger module loaded')"
+      - python -c "from src.utils import load_object, save_object; print('Utils module loaded')"
+      - python -c "from src.pipeline.predict_pipeline import PredictPipeline, CustomData; print('Predict pipeline loaded')"
+      - python -c "from src.pipeline.train_pipeline import *; print('Train pipeline loaded')"
+      - echo "Module tests passed!"
+      - echo "Validating Flask application..."
+      - python -c "from flask import Flask; from application import app; print('Flask app loaded successfully')"
+      - echo "Verifying artifacts..."
+      - ls -la artifacts/
+      - echo "Build Phase Complete"
+
+  post_build:
+    commands:
+      - echo "Starting Post-Build Phase..."
+      - echo "Creating deployment package..."
+      - mkdir -p deployment_package
+      - cp -r src deployment_package/
+      - cp -r templates deployment_package/
+      - cp -r artifacts deployment_package/
+      - cp -r logs deployment_package/
+      - cp application.py deployment_package/
+      - cp requirements.txt deployment_package/
+      - cp setup.py deployment_package/
+      - echo "Deployment package created successfully"
+      - echo "Build completed at $(date)"
+
+artifacts:
+  files:
+    - src/**/*
+    - templates/**/*
+    - artifacts/**/*
+    - application.py
+    - requirements.txt
+    - setup.py
+    - buildspec.yml
+  name: ML-Project-Artifact
+  
+  secondary-artifacts:
+    DeploymentPackage:
+      files:
+        - deployment_package/**/*
+      name: ML-Project-Deployment-$(date +%Y%m%d-%H%M%S)
+
+cache:
+  paths:
+    - '/root/.cache/pip/**/*'
+
+reports:
+  BuildReport:
+    files:
+      - build-report.json
+    file-format: 'JUNITXML'
